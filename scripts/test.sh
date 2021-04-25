@@ -1,0 +1,1 @@
+pytest --cov=winecasino tests/
