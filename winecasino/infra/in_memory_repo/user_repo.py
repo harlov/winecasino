@@ -8,8 +8,6 @@ from winecasino.core.entities.user import User
 
 
 class UserInMemoryRepo(BaseInMemoryRepo, UserRepo):
-    USERS_ = "users"
-
     @property
     def users_collection(self):
         return self.get_collection("users")

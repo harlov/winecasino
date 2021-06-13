@@ -24,8 +24,3 @@ async def test_register_user(user_in_memory_repo):
             chat_id="chat_with_user",
         ),
     )
-
-
-async def test_fetch_user(user_in_memory_repo, user):
-    user_fetch = await user_in_memory_repo.fetch(user.id)
-    assert user_fetch == user

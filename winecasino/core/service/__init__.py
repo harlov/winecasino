@@ -14,3 +14,18 @@ async def register_user(
     )
     await user_repo.save(user)
     return user
+
+
+async def create_country(
+        country_repo: repo.CountryRepo,
+        name: str,
+        part_of_world: entities.Country.PartOfWorld
+) -> entities.Country:
+    country = entities.Country(
+        id=entities.new_id(),
+        name=name,
+        part_of_world=part_of_world
+    )
+
+    await country_repo.save(country)
+    return country
